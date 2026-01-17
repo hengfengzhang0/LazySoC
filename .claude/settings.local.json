@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv sync)",
+      "Bash(uv add --dev pytest pytest-mock)",
+      "Bash(uv run pytest -v)",
+      "Bash(uv run lazysoc generate sample.yaml -o output/)",
+      "Bash(uv run lazysoc validate sample.yaml)",
+      "Bash(uv run lazysoc generate sample.yaml -o output/ --doc)"
+    ]
+  }
+}

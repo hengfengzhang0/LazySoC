@@ -1,0 +1,36 @@
+# LazySOC 寄存器定义示例
+# DDR PHY Controller 寄存器映射
+
+block:
+  name: DDR_PHY_CTRL
+  base_address: 0x40000000
+  description: DDR PHY Controller Register Block
+
+  registers:
+    - name: PHY_CONFIG
+      offset: 0x0
+      access: RW
+      description: PHY Configuration Register
+      fields:
+        - name: enable
+          bits: 0
+          reset: 0
+          description: PHY enable signal
+        - name: calibration_mode
+          bits: "3:1"
+          reset: 0x2
+          description: Calibration mode selection
+
+    - name: PHY_STATUS
+      offset: 0x4
+      access: RO
+      description: PHY Status Register
+      fields:
+        - name: lock_status
+          bits: 0
+          reset: 0
+          description: PLL lock status indicator
+        - name: error_count
+          bits: "15:8"
+          reset: 0
+          description: Error counter value
