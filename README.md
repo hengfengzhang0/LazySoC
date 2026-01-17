@@ -1,4 +1,4 @@
-# LazySOC
+# LazySoC
 
 SoC 寄存器生成工具 - 从 YAML 定义生成 SystemVerilog 和 C 代码。
 
